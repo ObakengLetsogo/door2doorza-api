@@ -1,4 +1,6 @@
 com/door2doorza/door2doorza_api/repository/UserRepository.class
+com/door2doorza/door2doorza_api/repository/VehicleRepository.class
+com/door2doorza/door2doorza_api/service/VehicleService.class
 com/door2doorza/door2doorza_api/controller/AuthController.class
 com/door2doorza/door2doorza_api/repository/TripRepository.class
 com/door2doorza/door2doorza_api/security/JwtUtils.class
@@ -6,8 +8,10 @@ com/door2doorza/door2doorza_api/Door2doorzaApiApplication.class
 com/door2doorza/door2doorza_api/security/JwtAuthenticationFilter.class
 com/door2doorza/door2doorza_api/service/TripService.class
 com/door2doorza/door2doorza_api/service/UserService.class
+com/door2doorza/door2doorza_api/controller/VehicleController.class
 com/door2doorza/door2doorza_api/config/SecurityConfig.class
 com/door2doorza/door2doorza_api/model/User.class
 com/door2doorza/door2doorza_api/controller/UserController.class
+com/door2doorza/door2doorza_api/model/Vehicle.class
 com/door2doorza/door2doorza_api/controller/TripController.class
 com/door2doorza/door2doorza_api/model/Trip.class
