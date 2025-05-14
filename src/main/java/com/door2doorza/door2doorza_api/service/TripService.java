@@ -105,4 +105,13 @@ public class TripService {
         }
         return false;
     }
+    
+    // New methods for counting trips
+    public long countAllTrips() {
+        return tripRepository.count();
+    }
+    
+    public long countTripsByStatus(String status) {
+        return tripRepository.countByStatus(status);
+    }
 }

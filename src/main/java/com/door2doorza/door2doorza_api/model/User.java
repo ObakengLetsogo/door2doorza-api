@@ -34,6 +34,40 @@ public class User {
     @Column
     private String profilePicture;
     
+    // Driver-specific fields
+    @Column
+    private String driverLicenseNumber;
+    
+    @Column
+    private LocalDateTime driverLicenseExpiry;
+    
+    @Column
+    private Boolean driverVerified;
+    
+    @Column
+    private Boolean driverAvailable;
+    
+    @Column
+    private Double currentLatitude;
+    
+    @Column
+    private Double currentLongitude;
+    
+    // Passenger-specific fields
+    @Column
+    private String preferredPaymentMethod;
+    
+    @Column
+    private String emergencyContact;
+    
+    // Admin-specific fields
+    @Column
+    private String adminLevel; // SUPER_ADMIN, SUPPORT_ADMIN, etc.
+    
+    @Column
+    private String department;
+    
+    // Common fields
     @Column(nullable = false)
     private LocalDateTime createdAt;
     
@@ -43,9 +77,94 @@ public class User {
     // Default constructor
     public User() {
         this.createdAt = LocalDateTime.now();
+        this.driverVerified = false;
+        this.driverAvailable = false;
     }
     
-    // Getters and Setters
+    // Existing getters and setters...
+    
+    // New getters and setters for the added fields
+    public String getDriverLicenseNumber() {
+        return driverLicenseNumber;
+    }
+    
+    public void setDriverLicenseNumber(String driverLicenseNumber) {
+        this.driverLicenseNumber = driverLicenseNumber;
+    }
+    
+    public LocalDateTime getDriverLicenseExpiry() {
+        return driverLicenseExpiry;
+    }
+    
+    public void setDriverLicenseExpiry(LocalDateTime driverLicenseExpiry) {
+        this.driverLicenseExpiry = driverLicenseExpiry;
+    }
+    
+    public Boolean getDriverVerified() {
+        return driverVerified;
+    }
+    
+    public void setDriverVerified(Boolean driverVerified) {
+        this.driverVerified = driverVerified;
+    }
+    
+    public Boolean getDriverAvailable() {
+        return driverAvailable;
+    }
+    
+    public void setDriverAvailable(Boolean driverAvailable) {
+        this.driverAvailable = driverAvailable;
+    }
+    
+    public Double getCurrentLatitude() {
+        return currentLatitude;
+    }
+    
+    public void setCurrentLatitude(Double currentLatitude) {
+        this.currentLatitude = currentLatitude;
+    }
+    
+    public Double getCurrentLongitude() {
+        return currentLongitude;
+    }
+    
+    public void setCurrentLongitude(Double currentLongitude) {
+        this.currentLongitude = currentLongitude;
+    }
+    
+    public String getPreferredPaymentMethod() {
+        return preferredPaymentMethod;
+    }
+    
+    public void setPreferredPaymentMethod(String preferredPaymentMethod) {
+        this.preferredPaymentMethod = preferredPaymentMethod;
+    }
+    
+    public String getEmergencyContact() {
+        return emergencyContact;
+    }
+    
+    public void setEmergencyContact(String emergencyContact) {
+        this.emergencyContact = emergencyContact;
+    }
+    
+    public String getAdminLevel() {
+        return adminLevel;
+    }
+    
+    public void setAdminLevel(String adminLevel) {
+        this.adminLevel = adminLevel;
+    }
+    
+    public String getDepartment() {
+        return department;
+    }
+    
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+    
+    // Keep all existing getters and setters for the original fields
     public Long getId() {
         return id;
     }
